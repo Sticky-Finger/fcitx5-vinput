@@ -28,11 +28,11 @@ sherpa_onnx_set_vars() {
   SHERPA_ONNX_SHA256=""
 
   case "${version}" in
-  2.0.0)
+  2.0.3)
     if [[ "${target_arch}" == "aarch64" ]]; then
-      SHERPA_ONNX_SHA256="0ee6e6a6de388f9db6f24c241ee6631c7509d47f3c8e5cd7b05259ff92f722b6"
+      SHERPA_ONNX_SHA256="c42748225180235bdd4ba10f8c4575b54beb8d5b26a5303bb3051026a0fe4e53"
     elif [[ "${target_arch}" == "x86_64" ]]; then
-      SHERPA_ONNX_SHA256="10378908bc8976d324d6cc1e882bccf982ab9e6e6e0cfb433bae9e3871646c34"
+      SHERPA_ONNX_SHA256="c16987540bc90cd10bab271023b2dcfb0864892b5af74cb1c9a9c7f1c4efe3af"
     fi
     ;;
   esac
@@ -52,4 +52,4 @@ sherpa_onnx_fetch_digest() {
              | ltrimstr("sha256:")'
 }
 
-sherpa_onnx_set_vars "${SHERPA_ONNX_VERSION:-2.0.0}"
+sherpa_onnx_set_vars "${SHERPA_ONNX_VERSION:-2.0.3}"
